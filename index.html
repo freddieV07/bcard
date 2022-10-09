@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width:800px) {
+            .card{
+           transform:  rotateY(40deg);
+           margin-left: 80px;
+        }
+        }
+        body{
+            background: #eee;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 50vh;
+        }
+        .card{
+            margin-top: 40px;
+            width: 250px;
+            height: 320px;
+            border-radius: 0px 10px 10px 0px;
+            background: #f4f4f4;
+            box-shadow: 10px 40px 40px rgba(0, 0, 0, 0.2);
+            perspective: 180em;
+
+           
+        }
+        .cover{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgb(49, 0, 0);
+            border-radius: 0px 10px 10px 0px;
+            transform-origin: left;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+        }
+        .card:hover .cover{
+            transform: rotateY(-160deg);
+        }
+       
+        .front, .back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .front{
+            background: linear-gradient(180deg,#7b4397,  #dc2430 );
+            border-radius: 0px 10px 10px 0px;
+            color: #333;
+        }
+        .back{
+            background: #ddd;
+            border-radius: 10px 0px 0px 10px;
+            transform: rotateY(180deg);
+            overflow: hidden;
+        }
+        .covr .bday{
+    position: relative;
+    left: -5px;
+    width: 200px;
+    height: 205px;
+    border-radius: 50%;
+       
+}
+        .box{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);   
+    overflow: hidden;
+}
+.loader
+{
+    content: '';
+    position: relative;
+    width: 80px;
+    top: -30px;
+    margin-left: 70px;
+    height: 280px;
+    align-items: center;
+    background: linear-gradient(315deg, #00ccff, #d400d4);  
+    animation: anim 4s linear infinite; 
+    
+}
+.covr
+{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 66px;
+    left: 30px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: linear-gradient(180deg,#7b4397,  #dc2430 );
+      
+
+}
+
+@keyframes anim {
+0%{
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+}
+}
+.text {
+    background:linear-gradient(315deg, #00ccff, #d400d4) ;
+     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #333;
+    padding: 1px 10px 10px 10px;
+}
+.text h1{
+    font-size: 30px;
+}
+.text p{
+    line-height: 27px;
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="text">
+            <h1>Happy Birthday</h1>
+            <p>On this day few years ago, God created a very intelligent,
+                talented, adorable, funny, hot and beautiful Fool and guess who that Fool is,
+                You! And i just want to say, Fuck U!
+            </p>
+        </div>
+        <div class="cover">
+            <div class="front">
+               <div>
+                <div class="box">
+                    <div class="loader">
+                    </div>  
+                   </div>
+                   <div class="covr">
+                 <img src="png-clipart-cupcake-birthday-cake-happy-birthday-to-you-bows-and-ribbons-free-s-miscellaneous-purple-removebg-preview.png" alt="" class="bday">
+                   </div>
+                </div> 
+            </div>
+            <div class="back">
+                <img src="download (19).jpg" alt="">
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
